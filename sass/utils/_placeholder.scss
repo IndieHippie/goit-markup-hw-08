@@ -1,0 +1,26 @@
+%button {
+    cursor: pointer;
+  font-family: $main-font-family;
+  color: $background-color;
+  background: $accent-color;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  border: none;
+
+  width: 200px;
+  height: 50px;
+
+  transition-property: background-color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color-second;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

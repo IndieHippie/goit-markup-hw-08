@@ -1,0 +1,173 @@
+.footer {
+  padding: 60px 0;
+  background: $third-background-color;
+}
+
+.footer-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.footer__logo {
+  font-family: $second-font-family;
+  color: $background-color;
+  margin-right: 0;
+}
+
+.box-title {
+  color: $background-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/*===== Address =====*/
+
+.address-list {
+  margin-top: 20px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__location {
+    margin-top: 20px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $background-color;
+    transition-property: color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__link {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $footer-contact-color;
+
+    transition-property: color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+/* ==== Join us ==== */
+
+.central-box {
+  margin-left: 84px;
+}
+
+.social-list {
+  display: flex;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+
+  &__icon {
+    fill: $background-color;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ==== subscribe ==== */
+
+.subscribe-box {
+  margin-left: 93px;
+}
+
+.form-footer {
+  &__thumb {
+    display: flex;
+  }
+
+  &__input {
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    width: 358px;
+    height: 50px;
+
+    padding-left: 16px;
+    outline: none;
+
+    color: $footer-contact-color;
+    background-color: $third-background-color;
+    border: 1px solid $footer-contact-color;
+
+    &:hover {
+      border-color: $accent-color;
+    }
+
+    &:focus-within {
+      border-color: $accent-color;
+    }
+  }
+}
+
+.footer-button {
+  @extend %button;
+  position: relative;
+
+  margin-left: 12px;
+
+  &__subscribe {
+    padding-right: 30px;
+  }
+
+  &__icon {
+    margin-left: 10px;
+
+    position: absolute;
+
+    content: "";
+    width: 24px;
+    height: 24px;
+  }
+}

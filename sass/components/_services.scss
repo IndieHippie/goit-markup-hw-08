@@ -1,0 +1,35 @@
+.service {
+  padding-top: 0;
+}
+
+.services__list {
+  list-style: none;
+  display: flex;
+}
+
+.services__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  
+}
+
+.services__name {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $background-color;
+}

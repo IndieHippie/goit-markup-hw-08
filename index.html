@@ -25,12 +25,34 @@
 
     <header class="header">
       <div class="container main-nav">
-        <a href="./index.html" class="logo link">
-          <span class="logo__text">Web</span>Studio
-        </a>
-
         <nav class="header-nav">
-          <ul class="header-nav__list list">
+          <a href="./index.html" class="logo link">
+            <span class="logo__text">Web</span>Studio
+          </a>
+          <button
+            type="button"
+            class="menu-button is-open"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+            
+              <use class="icon-cross" href="./images/icons.svg#cross"></use>
+              <use class="icon-menu" href="./images/icons.svg#menu"></use>
+            </svg>
+          </button>
+          <!-- <div class="menu-container" id="menu-container"
+          data-menu>
+            <div class="navigation"></div>
+            <div class="contacts"></div>
+          </div> -->
+          <!-- <div class="menu-container"></div> -->
+          <!-- <ul class="header-nav__list list">
             <li class="header-nav__item">
               <a
                 href="./index.html"
@@ -61,7 +83,8 @@
             </svg>
             +38 096 111 11 11</a
           >
-        </div>
+        </div>-->
+        </nav>
       </div>
     </header>
 
@@ -82,66 +105,68 @@
                 Оставьте свои данные, мы вам перезвоним
               </p>
               <form class="form">
-                  <label class="form__field">
-                    <svg class="form__icon">
-                      <use href="./images/icons.svg#icon-person"></use>
-                    </svg>
-                    <span class="form__lable">Имя</span>
-                    <input
-                      type="text"
-                      class="form__input"
-                      name="username"
-                      required
-                    />
-                  </label>
-                  <label class="form__field">
-                    <svg class="form__icon">
-                      <use href="./images/icons.svg#icon-phone"></use>
-                    </svg>
-                    <span class="form__lable">Телефон</span>
-                    <input
-                      type="tel"
-                      class="form__input"
-                      name="phone_number"
-                      required
-                    />
-                  </label>
-                  <label class="form__field">
-                    <svg class="form__icon">
-                      <use href="./images/icons.svg#icon-email"></use>
-                    </svg>
-                    <span class="form__lable">Почта</span>
-                    <input
-                      type="email"
-                      class="form__input"
-                      name="mail"
-                      required
-                    />
-                  </label>
-                  <label class="form__field">
-                    <span class="form__lable">Комментарий</span>
-                    <textarea
-                      name="feedback"
-                      class="form__textarea"
-                      rows="5"
-                      placeholder="Введите текст"
-                    ></textarea>
-                  </label>
-                  <!-- Checkbox -->
-                  <label class="checkbox">
-                    <input
-                      type="checkbox"
-                      class="checkbox__input"
-                      name="topic"
-                      required
-                    />
-                    <span class="checkbox__icon"></span>
-                    <span class="checkbox__lable">
-                      Соглашаюсь с рассылкой и принимаю </span
-                    ><a class="checkbox__link" href="#">Условия договора</a>
-                  </label>
+                <label class="form__field">
+                  <svg class="form__icon">
+                    <use href="./images/icons.svg#icon-person"></use>
+                  </svg>
+                  <span class="form__lable">Имя</span>
+                  <input
+                    type="text"
+                    class="form__input"
+                    name="username"
+                    required
+                  />
+                </label>
+                <label class="form__field">
+                  <svg class="form__icon">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                  <span class="form__lable">Телефон</span>
+                  <input
+                    type="tel"
+                    class="form__input"
+                    name="phone_number"
+                    required
+                  />
+                </label>
+                <label class="form__field">
+                  <svg class="form__icon">
+                    <use href="./images/icons.svg#icon-email"></use>
+                  </svg>
+                  <span class="form__lable">Почта</span>
+                  <input
+                    type="email"
+                    class="form__input"
+                    name="mail"
+                    required
+                  />
+                </label>
+                <label class="form__field">
+                  <span class="form__lable">Комментарий</span>
+                  <textarea
+                    name="feedback"
+                    class="form__textarea"
+                    rows="5"
+                    placeholder="Введите текст"
+                  ></textarea>
+                </label>
+                <!-- Checkbox -->
+                <label class="checkbox">
+                  <input
+                    type="checkbox"
+                    class="checkbox__input"
+                    name="topic"
+                    required
+                  />
+                  <span class="checkbox__icon"></span>
+                  <span class="checkbox__lable">
+                    Соглашаюсь с рассылкой и принимаю </span
+                  ><a class="checkbox__link" href="#">Условия договора</a>
+                </label>
 
-                <button type="submit" class="button button-submit">Отправить</button>
+                <button type="submit" class="button button-submit">
+                  Отправить
+                </button>
               </form>
 
               <div class="close-container">
@@ -247,7 +272,6 @@
                 alt="teampearson1"
                 height="260"
                 width="270"
-            
               />
               <div class="team-list__container">
                 <h3 class="team-list__name">Игорь Демьяненко</h3>
@@ -290,7 +314,6 @@
                 alt="teampearson2"
                 height="260"
                 width="270"
-            
               />
               <div class="team-list__container">
                 <h3 class="team-list__name">Игорь Демьяненко</h3>
@@ -333,7 +356,6 @@
                 alt="teampearson3"
                 height="260"
                 width="270"
-             
               />
               <div class="team-list__container">
                 <h3 class="team-list__name">Игорь Демьяненко</h3>
@@ -376,7 +398,6 @@
                 alt="teampearson4"
                 height="260"
                 width="270"
-           
               />
               <div class="team-list__container">
                 <h3 class="team-list__name">Игорь Демьяненко</h3>
@@ -472,74 +493,73 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer-box">
-        <div class="left-box">
-          <a href="./index.html" class="logo footer__logo link"
-            ><span class="logo__text">Web</span>Studio</a
-          >
-          <address class="address">
-            <ul class="address-list list">
-              <li class="address-list__item">
-                <a
-                  href="https://goo.gl/maps/iUyD26FAgrD7Dm3F8"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="address-list__location link"
-                >
-                  г. Киев, пр-т Леси Украинки, 26
+        <div class="tablet-container">
+          <div class="left-box">
+            <a href="./index.html" class="logo footer__logo link"
+              ><span class="logo__text">Web</span>Studio</a
+            >
+            <address class="address">
+              <ul class="address-list list">
+                <li class="address-list__item">
+                  <a
+                    href="https://goo.gl/maps/iUyD26FAgrD7Dm3F8"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="address-list__location link"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="address-list__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="address-list__link link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address-list__item">
+                  <a href="tel:+380961111111" class="address-list__link link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <!-- Join us -->
+          <div class="central-box">
+            <p class="box-title">Присоединяйтесь</p>
+            <ul class="social-list list">
+              <li class="social-list__item">
+                <a href="#" class="social-list__link">
+                  <svg class="social-list__icon" width="60" height="60">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="address-list__item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="address-list__link link"
-                  >info@devstudio.com</a
-                >
+              <li class="social-list__item">
+                <a href="#" class="social-list__link">
+                  <svg class="social-list__icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-list__item">
-                <a 
-                href="tel:+380961111111" 
-                class="address-list__link link"
-                  >+38 096 111 11 11</a
-                >
+              <li class="social-list__item">
+                <a href="#" class="social-list__link">
+                  <svg class="social-list__icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a href="#" class="social-list__link">
+                  <svg class="social-list__icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <!-- Join us -->
-        <div class="central-box">
-          <p class="box-title">Присоединяйтесь</p>
-          <ul class="social-list list">
-            <li class="social-list__item">
-              <a href="#" class="social-list__link">
-                <svg class="social-list__icon" width="60" height="60">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a href="#" class="social-list__link">
-                <svg class="social-list__icon">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a href="#" class="social-list__link">
-                <svg class="social-list__icon">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a href="#" class="social-list__link">
-                <svg class="social-list__icon">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
         <!-- Subscribe  -->
 
         <div class="subscribe-box">
@@ -556,9 +576,12 @@
                 />
               </label>
               <button class="button footer-button" type="submit">
-                <span class="footer-button__subscribe">Подписаться <svg class="footer-button__icon">
-                  <use href="./images/icons.svg#icon-icon-send"></use>
-                </svg></span>
+                <span class="footer-button__subscribe"
+                  >Подписаться
+                  <svg class="footer-button__icon">
+                    <use href="./images/icons.svg#icon-icon-send"></use>
+                  </svg>
+                </span>
               </button>
             </div>
           </form>
@@ -566,5 +589,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

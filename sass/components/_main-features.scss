@@ -1,13 +1,38 @@
 .features-list {
-  display: flex;
-
+  
   padding-left: 0;
 
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    margin: -15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: -15px;
+  }
+
   &__item {
-    width: 270px;
+    
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 4 * 30px) / 4);
+      margin: 15px;
+    }
 
     &:not(:last-child) {
-      margin-right: 30px;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
     }
 
     &::before {
@@ -15,18 +40,13 @@
       content: "";
 
       height: 120px;
+      margin-bottom: 30px;
 
       background: $second-background-color;
       border-radius: 4px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-
-      margin-bottom: 30px;
-    }
-
-    &:not(:last-child) {
-      margin-right: 30px;
     }
   }
 
@@ -50,29 +70,29 @@
   }
 }
 
-@each $iconName in $iconList {
-  .icon-#{$iconName}::before {
-    background-size: 70px;
-    background-image: url("../images/#{$iconName}.svg");
-  }
+.icon-antenna::before {
+  background-size: 70px;
+  background-image: url("../images/antenna.svg");
 }
 
-// .icon-antenna::before {
-//   background-size: 70px;
-//   background-image: url("../images/antenna.svg");
-// }
+.icon-clock::before {
+  background-size: 70px;
+  background-image: url("../images/clock.svg");
+}
 
-// .icon-clock::before {
-//   background-size: 70px;
-//   background-image: url("../images/clock.svg");
-// }
+.icon-diagram::before {
+  background-size: 70px;
+  background-image: url("../images/diagram.svg");
+}
 
-// .icon-diagram::before {
-//   background-size: 70px;
-//   background-image: url("../images/diagram.svg");
-// }
+.icon-astronaut::before {
+  background-size: 70px;
+  background-image: url("../images/astronaut.svg");
+}
 
-// .icon-astronaut::before {
-//   background-size: 70px;
-//   background-image: url("../images/astronaut.svg");
+// @each $iconName in $iconList {
+//   .icon-#{$iconName}::before {
+//     background-size: 70px;
+//     background-image: url("../images/#{$iconName}.svg");
+//   }
 // }

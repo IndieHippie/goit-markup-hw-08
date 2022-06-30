@@ -31,8 +31,10 @@ label {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &__title {
     text-align: center;
@@ -47,10 +49,20 @@ label {
 }
 
 .container {
-  width: 1200px;
+  width: 480px;
+  
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+
 }
 
 .list {
@@ -61,28 +73,6 @@ label {
 
 .link {
   text-decoration: none;
-}
-
-.backdrop {
-  z-index: 1;
-
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-
-  background: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-
-  transition-duration: $transition-duration;
-  transition-timing-function: $timing-function;
-}
-
-.backdrop.is-hidden {
-  z-index: 1;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .visually-hidden {
@@ -98,4 +88,3 @@ label {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-

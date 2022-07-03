@@ -7,10 +7,6 @@
   margin: -15px;
   padding: 0;
 
-//   @media screen and (max-width: 767px) {
-//     margin-bottom: 30px;
-//   }
-
   @media screen and (min-width: 768px) {
     margin: -15px;
   }
@@ -61,14 +57,7 @@
   &__link {
     display: inline-flex;
     justify-content: center;
-    align-items: center;
-
-    // @media screen and (min-width: 1200px) {
-    //    width: 170px;
-    // height: 92px;
-    
-    //  }
-    
+    align-items: center;  
     }
   }
 

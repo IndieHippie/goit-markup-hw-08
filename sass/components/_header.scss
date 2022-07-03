@@ -6,22 +6,25 @@
 .header-nav {
   position: relative;
 
+  @media screen and (min-width: 480px) {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
   @media screen and (max-width: 767px) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 60px;
   }
-
 }
 
 .navigation {
-
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     margin-bottom: 300px;
-  margin-left: 40px;
+    margin-left: 40px;
   }
-  
 }
 
 .header-nav__item {
@@ -29,7 +32,6 @@
     @media screen and (max-width: 767px) {
       margin-bottom: 32px;
     }
-    
   }
 }
 
@@ -49,6 +51,12 @@
   &:hover,
   &:focus {
     color: $accent-color;
+    outline: none;
+  }
+  
+  &--active {
+    position: relative;
+    color: $accent-color;
   }
 }
 
@@ -58,9 +66,7 @@
     margin-left: 40px;
     margin-bottom: 48px;
   }
-  
 }
-
 
 .contact__link {
   display: block;
@@ -70,11 +76,19 @@
 
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
-    margin-bottom: 32px;
-  }
-  
+      margin-bottom: 32px;
+    }
   }
 
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    outline: none;
+  }
 }
 
 .contact__link--tel {
@@ -99,6 +113,7 @@
   @media screen and (max-width: 767px) {
     display: inline-flex;
     align-items: baseline;
+    margin-top: 64px;
   }
 
   .contacts__link {
@@ -108,6 +123,17 @@
     letter-spacing: 0.02em;
 
     color: $accent-color;
+    outline: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color-second;
+      outline: none;
+    }
   }
 
   .line {

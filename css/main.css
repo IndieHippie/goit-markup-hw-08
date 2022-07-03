@@ -130,6 +130,17 @@ label {
 .header-nav {
   position: relative;
 }
+@media screen and (min-width: 480px) {
+  .header-nav {
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 @media screen and (max-width: 767px) {
   .header-nav {
     display: -webkit-box;
@@ -174,6 +185,11 @@ label {
 }
 .header-nav__link:hover, .header-nav__link:focus {
   color: #2196f3;
+  outline: none;
+}
+.header-nav__link--active {
+  position: relative;
+  color: #2196f3;
 }
 
 .contacts {
@@ -190,11 +206,21 @@ label {
   display: block;
   letter-spacing: 0.02em;
   color: #757575;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (max-width: 767px) {
   .contact__link:not(:last-child) {
     margin-bottom: 32px;
   }
+}
+.contact__link:hover, .contact__link:focus {
+  color: #2196f3;
+  outline: none;
 }
 
 .contact__link--tel {
@@ -223,6 +249,7 @@ label {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    margin-top: 64px;
   }
 }
 .contacts__list .contacts__link {
@@ -231,6 +258,17 @@ label {
   line-height: 22px;
   letter-spacing: 0.02em;
   color: #2196f3;
+  outline: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts__list .contacts__link:hover, .contacts__list .contacts__link:focus {
+  color: #188CE8;
+  outline: none;
 }
 .contacts__list .line {
   color: #757575;
@@ -244,28 +282,10 @@ label {
   }
 }
 
-.menu-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .navigation {
   margin-right: 84px;
 }
 
-.header-nav {
-  height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
 @media screen and (min-width: 768px) {
   .header-nav__list {
     display: -webkit-box;
@@ -1152,9 +1172,6 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .portfolio-list {
@@ -1518,6 +1535,17 @@ label {
   display: none;
 }
 
+@media screen and (min-width: 480px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 1;
+  }
+}
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
@@ -1525,7 +1553,6 @@ label {
     top: 100%;
     left: 0;
     width: 100%;
-    height: 800px;
     background-color: #fff;
   }
   .menu-container.is-open {

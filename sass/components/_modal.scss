@@ -24,12 +24,14 @@
 
 .modal {
   position: absolute;
-
+  width: 100%;
   top: 50%;
   left: 50%;
 
-  width: 450px;
-  height: 609px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
 
   @media screen and (min-width: 1200px) {
     width: 528px;
@@ -79,6 +81,11 @@
   }
 
   &__input {
+    width: 100%;
+    // @media screen and (min-width: 768px) {
+      
+    // }
+
     margin-top: 4px;
     padding: 10px 40px;
     font: inherit;
@@ -107,6 +114,7 @@
     content: "";
     position: absolute;
     fill: $color;
+
     top: 28px;
     left: 12px;
     width: 18px;
@@ -128,9 +136,13 @@
   &__textarea {
     resize: none;
     outline: none;
+    width: 100%;
+    padding: 0 40px;
 
-    width: 370px;
-    height: 120px;
+    @media screen and (min-width: 480px) {
+      width: 370px;
+      height: 120px;
+    }
 
     @media screen and (min-width: 1200px) {
       width: 448px;
@@ -237,8 +249,12 @@
 
 .close-container {
   position: absolute;
-  top: 8px;
-  left: 413px;
+  top: 2%;
+  left: 90%;
+  @media screen and (min-width: 480px) {
+    top: 8px;
+    left: 413px;
+  }
 
   @media screen and (min-width: 1200px) {
     left: 488px;

@@ -66,11 +66,15 @@
   max-width: 695px;
   margin: 0 auto 30px;
   color: $background-color;
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 44px;
+  }
 }
 
 .button-main {

@@ -12,6 +12,7 @@
 
 .menu-button .icon-cross {
   display: none;
+  
 }
 
 .menu-button.is-open .icon-cross {
@@ -23,6 +24,10 @@
 }
 
 .menu-container {
+  z-index: 1;
+  background-color: #fff;
+  
+ 
   @media screen and (min-width: 480px) {
     display: flex;
     align-items: center;
@@ -33,13 +38,19 @@
     display: none;
     position: absolute;
 
+    padding-left: 40px;
+    padding-bottom: 48px;
+
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    height: 100vh;
+   
 
     &.is-open {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 }

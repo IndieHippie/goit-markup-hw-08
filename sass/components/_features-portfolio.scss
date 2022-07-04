@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    justify-content: center;
+    justify-content: left;
 
     margin: -15px;
   }
@@ -105,7 +105,7 @@
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translatey(100%);
+  transform: translatey(101%);
 
   transition-property: transform;
   transition-duration: $transition-duration;

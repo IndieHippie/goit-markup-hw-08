@@ -3,6 +3,13 @@
   border-bottom: 1px solid $border-color;
 }
 
+.main-nav {
+  @media screen and (max-width: 767px) {
+     padding: 0;
+  }
+ 
+}
+
 .header-nav {
   position: relative;
 
@@ -22,8 +29,7 @@
 
 .navigation {
   @media screen and (max-width: 767px) {
-    margin-bottom: 300px;
-    margin-left: 40px;
+   
   }
 }
 
@@ -63,8 +69,7 @@
 .contacts {
   display: block;
   @media screen and (max-width: 767px) {
-    margin-left: 40px;
-    margin-bottom: 48px;
+    
   }
 }
 
@@ -112,11 +117,14 @@
 .contacts__list {
   @media screen and (max-width: 767px) {
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: baseline;
     margin-top: 64px;
+
   }
 
   .contacts__link {
+    width: 100%;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;

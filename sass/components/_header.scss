@@ -4,14 +4,16 @@
 }
 
 .main-nav {
+  
   @media screen and (max-width: 767px) {
-     padding: 0;
+   padding-left: 15px;
+  padding-right: 15px;
   }
  
 }
 
 .header-nav {
-  position: relative;
+background-color: #fff;
 
   @media screen and (min-width: 480px) {
     height: 80px;
@@ -24,6 +26,7 @@
     align-items: center;
     justify-content: space-between;
     height: 60px;
+  
   }
 }
 

@@ -17,10 +17,15 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
+   
     &:first-child {
       margin-right: 30px;
     }
   }
-  
+}
+
+.contact__link:not(:first-child) {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }

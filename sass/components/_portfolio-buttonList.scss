@@ -1,7 +1,11 @@
 .button-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
 
 
   @media screen and (min-width: 768px) {
@@ -9,10 +13,12 @@
     align-items: center;
     justify-content: center;
 
+    margin-bottom: 30px;
+
   }
 
   @media screen and (min-width: 1200px) {
-    
+    margin-bottom: 34px;
   }
 
   &__item {

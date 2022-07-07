@@ -16,6 +16,7 @@ p {
 }
 
 img {
+  z-index: 0;
   display: block;
   max-width: 100%;
   height: auto;
@@ -126,6 +127,7 @@ label {
 
 /*======= Header =======*/
 .header {
+  z-index: 1;
   border-bottom: 1px solid #ececec;
 }
 @media screen and (max-width: 767px) {
@@ -1680,7 +1682,7 @@ label {
   display: none;
 }
 
-.menu-button.is-open .header-nav.logo {
+.header-nav .logo.is-hidden {
   opacity: 0;
 }
 
